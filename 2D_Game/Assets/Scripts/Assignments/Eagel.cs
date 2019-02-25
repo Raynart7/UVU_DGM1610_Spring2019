@@ -13,7 +13,7 @@ public class Eagel : Bird {
     // Start is called before the first frame update
     void Start()
     {
-     print("Kakaw!")   
+     print("Kakaw!");   
     }
 
     // Update is called once per frame
