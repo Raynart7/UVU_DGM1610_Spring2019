@@ -11,10 +11,12 @@ public class PlayerHealth : MonoBehaviour{
     public GameObject healthImage2;
     public GameObject healthImage3;
 
+    public LevelManager levelManager;
+
 
     public void ChangeHealth (int newHealth){
         health += newHealth;
-        
+        Display();
         }
 
     public void Display(){
@@ -38,7 +40,7 @@ public class PlayerHealth : MonoBehaviour{
                 healthImage1.SetActive(false);
                 healthImage2.SetActive(false);
                 healthImage3.SetActive(false);
-                print("YOU DIED");
+                levelManager.RespawnPlayer();
                 break;
 
 

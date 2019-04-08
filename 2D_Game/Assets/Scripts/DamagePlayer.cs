@@ -8,7 +8,9 @@ public class DamagePlayer : MonoBehaviour{
 
 
 public void OnTriggerEnter2D(Collider2D other){
-    if(other.GetComponent <PlayerHealth>() != null)
+    if(other.GetComponent <PlayerHealth>() != null){
+        other.GetComponent <PlayerHealth> ().ChangeHealth(damage);
+    
     }
 }
 

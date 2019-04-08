@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour{
 
-    public GameObject currentCheckPoints;
+    public GameObject currentCheckPoint;
     private Rigidbody2D pcRigid;
     private GameObject player;
 
@@ -15,7 +15,7 @@ public class LevelManager : MonoBehaviour{
 
     public int pointPenaltyOnDeath;
 
-    private float GravityScore;
+    private float gravityScore;
 
 
     void Start(){
@@ -23,17 +23,17 @@ public class LevelManager : MonoBehaviour{
         player = GameObject.Find("Player");   
     }
 
-    public void respawnPlayer(){
+    public void RespawnPlayer(){
         StartCoroutine ("RespawnPlayerCo");
 
     }
 
     public IEnumerator RespawnPlayerCo(){
-        Instantiate(deathParticles, pcRigid.transform.position, pcRigid.transform.rotation);
+        Instantiate(deathParticle, pcRigid.transform.position, pcRigid.transform.rotation);
         player.SetActive(false);
         player.GetComponent<Renderer> ().enabled = false;
 
-        gravityStore = pcRigid.GetComponent<Renderer>().gravityScale;
+        gravityScore = pcRigid.GetComponent<Rigidbody2D>().gravityScale;
         pcRigid.GetComponent<Rigidbody2D>().gravityScale = 0f;
         pcRigid.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 
@@ -42,10 +42,10 @@ public class LevelManager : MonoBehaviour{
         Debug.Log ("pc Respawn");
         yield return new WaitForSeconds (RespawnDelay);
         pcRigid.GetComponent<Rigidbody2D>().gravityScale = gravityScore;
-        pc.transform.position = currentCheckPoints.transform.position;
+        player.transform.position = currentCheckPoint.transform.position;
 
-        pc2.SetActive(true);
-        pc.GetComponent<Renderer> ().enabled = true;
+        player.SetActive(true);
+        player.GetComponent<Renderer> ().enabled = true;
         Instantiate (respawnParticle, currentCheckPoint.transform, currentCheckPoint);
 
     }

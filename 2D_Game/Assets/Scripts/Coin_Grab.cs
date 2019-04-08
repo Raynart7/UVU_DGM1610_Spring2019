@@ -9,8 +9,6 @@ public class Coin_Grab : MonoBehaviour{
     void OnTriggerEnter2D (Collider2D other){
         if(other.tag == "Player"){
 
-            print("You've collected String");
-
             ScoreManager.AddPoints(coinValue);
 
             Destroy(gameObject);
