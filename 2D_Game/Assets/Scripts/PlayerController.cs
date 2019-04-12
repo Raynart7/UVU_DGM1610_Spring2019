@@ -37,11 +37,16 @@ public class PlayerController : MonoBehaviour{
             GetComponent<Rigidbody2D>().velocity = new Vector2(-moveSpeed, GetComponent<Rigidbody2D>().velocity.y);
         }
 
-// Player jump
-    if(Input.GetKeyDown(KeyCode.W) && grounded){
+        // Player jump
+        if(Input.GetKeyDown(KeyCode.W) && grounded){
         Jump();
     }
     
+        if(GetComponent<Rigidbody2D>().velocity.x > 0)
+            transform.localScale = new Vector3(0.5f,0.5f,1f);
+
+        else if(GetComponent<Rigidbody2D>().velocity.x < 0)
+            transform.localScale = new Vector3(-0.5f,0.5f,1f);
 
 
         void Jump(){
