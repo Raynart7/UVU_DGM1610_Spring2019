@@ -71,8 +71,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4c88a2862ee34164db695f088e2bf2b4, type: 3}
-  m_Color: {r: 0, g: 1, b: 0.96727276, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 1a865a412782c5b41be1d69fd305ed9f, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -99,7 +99,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.91, y: 1.34}
+    oldSize: {x: 2.15, y: 1.5}
     newSize: {x: 1.91, y: 1.34}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b31d6464d2524fd4fa9e438f1801bb80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 50
+  speed: 35
   timeOut: 3
   player: {fileID: 0}
   enemyDeath: {fileID: 6502051436857253742, guid: 358406762bc3ef94189d12962bb4f455,
@@ -143,7 +143,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1

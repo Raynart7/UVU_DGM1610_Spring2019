@@ -17,7 +17,7 @@ public class Player_Ammo : MonoBehaviour{
 
     public void Display(){
         text.text = ammo.ToString();
-        print ("is running");
+        
     
     }
 
