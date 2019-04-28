@@ -12,12 +12,24 @@ public class PlayerHealth : MonoBehaviour{
     public GameObject healthImage3;
 
     public LevelManager levelManager;
+    private Animator animator;
 
 
-    public void ChangeHealth (int newHealth){
-        health += newHealth;
+    void Start(){
+        animator = GetComponent<Animator>();
+    }
+
+    public void ChangeHealth (int newHealth)
+    {
+       
+       health += newHealth;
         Display();
-        }
+       
+       if(health >3 )
+       {
+           health = 3;
+       }       
+    }
 
     public void Display(){
         switch(health){
@@ -41,6 +53,8 @@ public class PlayerHealth : MonoBehaviour{
                 healthImage2.SetActive(false);
                 healthImage3.SetActive(false);
                 levelManager.RespawnPlayer();
+                health = 3;
+                animator.SetBool("IsDead", true);
                 break;
 
 

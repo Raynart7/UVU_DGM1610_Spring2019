@@ -8,12 +8,11 @@ public class PlayerShoot : MonoBehaviour{
     public GameObject projectile;
 
 
-    void Start(){
-        projectile = Resources.Load("Prefabs/Projectile") as GameObject;
-    }
 
     void Update(){
-        if(Input.GetKeyDown(KeyCode.RightControl))
+        if(Input.GetKeyDown(KeyCode.RightControl) && GetComponent<Player_Ammo>().ammo > 0){
             Instantiate(projectile, firePoint.position, firePoint.rotation);
+            GetComponent<Player_Ammo>().ChangeAmmo(-1);
+        }
     }
 }

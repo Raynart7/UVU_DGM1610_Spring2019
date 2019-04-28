@@ -30,8 +30,8 @@ public class LevelManager : MonoBehaviour{
 
     public IEnumerator RespawnPlayerCo(){
         Instantiate(deathParticle, pcRigid.transform.position, pcRigid.transform.rotation);
-        player.SetActive(false);
-        player.GetComponent<Renderer> ().enabled = false;
+        //player.SetActive(false);
+        //player.GetComponent<Renderer> ().enabled = false;
 
         gravityScore = pcRigid.GetComponent<Rigidbody2D>().gravityScale;
         pcRigid.GetComponent<Rigidbody2D>().gravityScale = 0f;
@@ -44,8 +44,10 @@ public class LevelManager : MonoBehaviour{
         pcRigid.GetComponent<Rigidbody2D>().gravityScale = gravityScore;
         player.transform.position = currentCheckPoint.transform.position;
 
-        player.SetActive(true);
-        player.GetComponent<Renderer> ().enabled = true;
+        //player.SetActive(true);
+        player.GetComponent<Animator>().SetBool("IsDead", false);
+       // player.GetComponent<Renderer> ().enabled = true;
+        player.GetComponent<PlayerHealth>().Display();
         Instantiate (respawnParticle, currentCheckPoint.transform, currentCheckPoint);
 
     }
