@@ -124,8 +124,9 @@ GameObject:
   - component: {fileID: 150162237}
   - component: {fileID: 150162236}
   - component: {fileID: 150162235}
+  - component: {fileID: 150162238}
   m_Layer: 5
-  m_Name: Button
+  m_Name: 'Start '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -190,7 +191,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 150162236}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 150162238}
+        m_MethodName: Load
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Assignments
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &150162236
@@ -230,6 +242,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 150162233}
   m_CullTransparentMesh: 0
+--- !u!114 &150162238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 150162233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dfac3b6116713d4b91db0897cc07cd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &509839413
 GameObject:
   m_ObjectHideFlags: 0
@@ -571,8 +595,9 @@ GameObject:
   - component: {fileID: 1481241552}
   - component: {fileID: 1481241551}
   - component: {fileID: 1481241550}
+  - component: {fileID: 1481241553}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: Exit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -637,7 +662,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1481241551}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1481241553}
+        m_MethodName: Quit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1481241551
@@ -677,6 +713,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1481241548}
   m_CullTransparentMesh: 0
+--- !u!114 &1481241553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1481241548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29d4ab4e34d56c845ac375ab1e6feef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1676468857
 GameObject:
   m_ObjectHideFlags: 0
@@ -704,7 +752,7 @@ RectTransform:
   m_GameObject: {fileID: 1676468857}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.530293, y: 1.5418214, z: 1}
+  m_LocalScale: {x: 1.530293, y: 2.3451798, z: 1}
   m_Children: []
   m_Father: {fileID: 1279765317}
   m_RootOrder: 0
@@ -841,6 +889,7 @@ GameObject:
   - component: {fileID: 2049073232}
   - component: {fileID: 2049073234}
   - component: {fileID: 2049073233}
+  - component: {fileID: 2049073235}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -909,3 +958,15 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2049073231}
   m_CullTransparentMesh: 0
+--- !u!114 &2049073235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2049073231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dfac3b6116713d4b91db0897cc07cd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
